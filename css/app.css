@@ -1,0 +1,61 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+#view{
+    width: 100%;
+    height: 100%;
+}
+.app-header{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%; 
+}
+.app-content{
+    padding-top: 80px;
+    width: 100%;
+    height: 80%;
+}
+.app-centred-container{
+    padding:10px; 
+    margin-left:auto;
+    margin-right:auto;
+    width: 80%;
+    max-width: 800px;
+    height: 80%;
+}
+
+.app-footer{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+}
+.app-menu{
+    width: 90%;
+    max-width: 380px;
+    display: block;
+    top: 0px;
+    position: absolute !important;
+    display: none;
+}
+
+.app-card-login{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    max-width: 360px;
+}
+.app-icon{
+    width: 100%;
+    text-align: center;
+}
+.app-anchor{
+    color:blue; 
+    text-decoration:underline;
+}
+.app-button{
+    width: 100%;
+}

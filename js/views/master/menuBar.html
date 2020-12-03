@@ -1,0 +1,15 @@
+<div class="w3-container w3-blue w3-card app-header">
+  <h1>
+    <a href="#" onclick="document.ctrl.open_menu().render()">
+      <i class="fa fa-bars"></i>
+    </a>
+    {title}
+  </h1>
+</div>
+<div id="menu" class="w3-sidebar w3-bar-block w3-card w3-white w3-animate-left app-menu">
+</div>
+<div id="content" class="w3-container app-content" onclick="document.ctrl.close_menu().render()">
+</div>
+<footer class="w3-container w3-theme app-footer" onclick="document.ctrl.close_menu().render()">
+  <h3>{footer}</h3>
+</footer>

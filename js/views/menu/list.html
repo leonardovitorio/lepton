@@ -1,0 +1,20 @@
+<div class="w3-container w3-blue">
+    <div class="w3-padding">
+        <h2>
+            <a href="#" onclick="document.ctrl.close_menu().render()">
+                <i class="fa fa-arrow-left"></i>
+            </a>
+        </h2>
+    </div>
+    <div class="w3-padding w3-center">
+        <img class="w3-circle" style="background-color: white;" src="./images/{image_src}" alt="{image_alt}">
+        <h2>{app_name}</h2>
+    </div>
+</div>
+<div class="w3-white">
+    <a class="w3-bar-item w3-button" href="#" style="color:black">Home</a>
+    <a class="w3-bar-item w3-button" href="#" onclick="document.ctrl.on_click('BookCtrl').render()" style="color:black">Books</a>
+    <a class="w3-bar-item w3-button" href="#" onclick="document.ctrl.on_click('PodcastCtrl').render()" style="color:black">Podscasts</a>
+    <a class="w3-bar-item w3-button" href="#" onclick="document.ctrl.on_back().render()" style="color:black">Exit</a>
+</div>
+<div style="clear: both;"></div>

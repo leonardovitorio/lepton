@@ -1,0 +1,4 @@
+[
+    {"name":"Books", "href":"BookCtrl", "image":"books.jpg"},
+    {"name":"Podcasts", "href":"PodcastCtrl", "image":"podcast.jpg"}
+]
