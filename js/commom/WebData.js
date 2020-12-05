@@ -16,7 +16,7 @@ function createCallback(callback){
             obj = Data.toData(data)
         }
         catch(e){
-            obj = response
+            obj = null
             console.log(e)
         }
         callback(err,obj)

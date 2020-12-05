@@ -1,10 +1,16 @@
 <div class="w3-container w3-blue w3-card app-header">
-  <h1>
-    <a href="#" onclick="document.ctrl.open_menu().render()">
-      <i class="fa fa-bars"></i>
-    </a>
-    {title}
-  </h1>
+  <div class="lepton-bar-left">
+    <h1>
+      <a href="#" onclick="document.ctrl.open_menu().render()">
+        <i class="fa fa-bars"></i>
+      </a>
+      {title}
+    </h1>
+  </div>
+  <div id="actions" class="lepton-bar-right">
+    &nbsp;
+  </div>
+  <div class="lepton-bar-clear"></div>
 </div>
 <div id="menu" class="w3-sidebar w3-bar-block w3-card w3-white w3-animate-left app-menu">
 </div>

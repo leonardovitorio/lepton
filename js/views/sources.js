@@ -8,9 +8,9 @@ export const sources = [
     new Source("master/menuBar","js/views/master/menuBar.html"),
 
     new Source("home/index","js/views/home/index.html"),
+    new Source("home/actions","js/views/home/actions.html"),
 
     new Source("menu/list","js/views/menu/list.html"),
-    new Source("menu/item","js/views/menu/item.html"),
 
     new Source("login/login","js/views/login/login.html"),
     new Source("login/newLogin","js/views/login/newLogin.html"),

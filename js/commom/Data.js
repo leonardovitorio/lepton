@@ -5,7 +5,7 @@ export class Data{
         var paramns = []
         for (var key in data){
             if (typeof data[key] !== 'function') {
-              paramns.add(encodeURI(key) +"="+ encodeURI(JSON.stringify(data[key])))
+              paramns.push(encodeURI(key) +"="+ encodeURI(JSON.stringify(data[key])))
             }
         }
         return paramns.join("&");

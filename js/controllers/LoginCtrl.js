@@ -1,4 +1,3 @@
-import { ModelView } from "../commom/ModelView.js";
 import { LoginModel } from "../models/LoginModel.js";
 import { TextView } from "../commom/TextView.js";
 import { html } from "../commom/html.js";

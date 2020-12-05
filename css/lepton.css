@@ -1,0 +1,18 @@
+/*
+
+*/
+
+.lepton-bar-left{
+    float: left;
+    width: 60%;
+    height: 100%;
+}
+.lepton-bar-right{
+    float: right;
+    width: 40%;
+    height: 100%;
+    text-align: right;
+}
+.lepton-bar-menu{
+    clear: both;
+}

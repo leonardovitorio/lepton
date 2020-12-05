@@ -24,7 +24,8 @@ export class MenuCtrl{
                         image_alt:'Demo App',
                         app_name:'App Demo'
                     }, html("menu/list"),[]),
-                    new HtmlView('content',html('home/index'))
+                    new HtmlView('content',html('home/index')),
+                    new ContentView('actions',{},html('home/actions'),[])
                 ]))
             }
         }();
