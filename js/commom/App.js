@@ -2,15 +2,39 @@ import { Ajax } from "../commom/Ajax.js"
 
 export var hashSources = {}
 
+var globals = {}
+
 export class App {
+    
+    static get current(){
+        return document.app
+    }
+    static get globals(){
+        return globals
+    }
+    static get masterCtrl(){
+        return document.masterCtrl
+    }
+    static set masterCtrl(value){
+        document.masterCtrl = value 
+    }
+    static get ctrl(){
+        return document.ctrl
+    }
+    static set ctrl(value){
+        document.ctrl = value
+    }
+
     constructor(sources, main) {
         this.sources = sources
         this.index = 0
-        this.hash = {}
+        
+        document.app = this
         
         this.main = main;
         this.load()
     }
+
     load() {
         var app = this
         var t = new class{

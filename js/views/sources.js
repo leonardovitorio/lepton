@@ -5,7 +5,7 @@ export const sources = [
     new Source("master/bar","js/views/master/bar.html"),
     new Source("master/iconBar","js/views/master/iconBar.html"),
     new Source("master/backBar","js/views/master/backBar.html"),
-    new Source("master/menuBar","js/views/master/menuBar.html"),
+    new Source("master/menu","js/views/master/menu.html"),
 
     new Source("home/index","js/views/home/index.html"),
     new Source("home/actions","js/views/home/actions.html"),

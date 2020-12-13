@@ -1,13 +1,13 @@
 import { ContentView } from "../commom/ContentView.js"
 import { ListView } from "../commom/ListView.js"
-import { rplc } from "../commom/rplc.js"
 import { Navigator } from "../commom/Navigator.js"
-import { TextView } from "../commom/TextView.js"
 import { html } from "../commom/html.js"
 import { PodcastModel } from "../models/PodcastModel.js"
 import { AsyncView } from "../commom/AsyncView.js"
 import { ModelBind } from "../commom/ModelBind.js"
 import { services } from '../commom/services.js'
+import { ArrayView } from "../commom/ArrayView.js"
+import { TextView } from "../commom/TextView.js"
 
 export class PodcastCtrl{
     constructor(){
@@ -22,7 +22,10 @@ export class PodcastCtrl{
             }
             callback(err, podcasts){
                 self.list = podcasts
-                var view = new ListView("view", {}, podcasts, html("podcast/list"), html("podcast/item"))
+                var view = new ArrayView([
+                    new TextView('menu_title','Podcast'),
+                    new ListView("content", {}, podcasts, html("podcast/list"), html("podcast/item"))
+                ]) 
                 t.render(view);
             }
         };
@@ -31,18 +34,18 @@ export class PodcastCtrl{
     on_create(){
         this.action = 'new';
         this.item.model = new PodcastModel('','')
-        return this.item.getView('view',{title: 'Podcast'}, html("podcast/form"))
+        return this.item.getView('content',{title: 'Podcast'}, html("podcast/form"))
     }
     on_edit(index){
         this.action = 'edit'
         this.item.model = this.list[index]
-        return this.item.getView('view',{title: 'Podcast'}, html("podcast/form"))
+        return this.item.getView('content',{title: 'Podcast'}, html("podcast/form"))
     }
     on_delete(index){
         this.action = 'delete'
         this.item.model = this.list[index]
         this.index = index
-        return new ContentView('view',this.item.model, html("podcast/delete"))
+        return new ContentView('content',this.item.model, html("podcast/delete"))
     }
     on_save(){
         var self = this
@@ -58,6 +61,6 @@ export class PodcastCtrl{
         return new AsyncView(t)
     }
     on_back(){
-        return Navigator.back()
+        return this.init()
     }
 }

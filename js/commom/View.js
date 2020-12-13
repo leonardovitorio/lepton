@@ -17,6 +17,13 @@ export class View{
     }
     setChilds(childs){
         this.childs = childs
+        return this
+    }
+    addChilds(childs){
+        childs.forEach((child) =>{
+            this.childs.push(child)
+        })
+        return this
     }
     forEach(target, list, func){
         var result = [];
