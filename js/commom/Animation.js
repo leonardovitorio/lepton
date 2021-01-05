@@ -1,15 +1,12 @@
 export class Animation{
-    get target(){
-        return this.__target
-    }
-    set target(value){
-        this.__target = value
-    }
-    init(){
+    init(el){
         throw "Implements the Init animation method."
     }
-    render(){
+    render(el){
         throw "Implements the Render animation method."
+    }
+    end(el){
+        throw "Implements the End animation method."
     }
 }
 

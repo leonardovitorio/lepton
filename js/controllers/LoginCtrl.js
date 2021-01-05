@@ -2,7 +2,7 @@ import { LoginModel } from "../models/LoginModel.js";
 import { TextView } from "../commom/TextView.js";
 import { html } from "../commom/html.js";
 import { MenuCtrl } from "./MenuCtrl.js";
-import { services } from "../commom/services.js";
+import { services } from "../services/services.js";
 import { AsyncView } from "../commom/AsyncView.js";
 import { ContentView } from "../commom/ContentView.js";
 import { Navigator } from "../commom/Navigator.js";

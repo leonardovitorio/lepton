@@ -6,7 +6,7 @@ import { TextView } from "../commom/TextView.js";
 import { html } from "../commom/html.js"
 import { Navigator } from "../commom/Navigator.js";
 import { ModelBind } from "../commom/ModelBind.js";
-import { services } from "../commom/services.js";
+import { services } from "../services/services.js";
 import { AsyncView } from "../commom/AsyncView.js";
 
 export class BookCtrl{

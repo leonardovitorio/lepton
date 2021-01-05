@@ -1,15 +1,11 @@
-import { onLoginSuccess } from "./tests/onLoginSuccess.js";
-import { Tests } from "./commom/Tests.js";
-import { sources } from "./sources.js";
-import { onLoginFail } from "./tests/onLoginFail.js";
-import { stepsSuccess } from "./tests/stepsSuccess.js";
-import { ajaxTest } from "./tests/ajaxTest.js";
+import { Tests } from "./commom/Tests.js"
+import { sources } from "./views/sources.js"
+import { AjaxTest } from "./tests/AjaxTest.js"
+import { LoginTest } from "./tests/LoginTest.js"
 
 var cases = [
-    //ajaxTest
-    //stepsSuccess,
-    onLoginSuccess,
-    //onLoginFail
-];
+    new AjaxTest(),
+    new LoginTest()
+]
 
 new Tests(cases, sources).run();

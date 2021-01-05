@@ -1,5 +1,5 @@
 import { AsyncView } from "../commom/AsyncView.js";
-import { services } from "../commom/services.js";
+import { services } from "../services/services.js";
 import { ContentView } from "../commom/ContentView.js";
 import { html } from "../commom/html.js";
 import { HtmlView } from "../commom/HtmlView.js";

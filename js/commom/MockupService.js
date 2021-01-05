@@ -1,9 +1,9 @@
 import {Service} from './Service.js'
 
 export class MockupService extends Service{
-    constructor(error, list, filtredList, item){
+    constructor(successful, list, filtredList, item){
         super()
-        this.error = error
+        this.error = !successful
         this.list = list
         this.filtredList = filtredList
         this.item = item

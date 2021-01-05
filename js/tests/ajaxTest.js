@@ -1,33 +1,26 @@
 import { Ajax } from "../commom/Ajax.js";
-import { ContentView } from "../commom/ContentView.js";
-import { AsyncView } from "../commom/AsyncView.js";
+import { assert } from "../commom/assert.js";
+import { Test } from "../commom/Test.js";
 
-export var ajaxTest = {
-    name: "Steps",
-    run: ()=>{
-        // steps
-        /*var steps = new Steps([
-            ()=>{
-                Ajax.get("/App/api/menu.json",steps.next());
-            },(err, data)=>{
-                steps.data = new ContentView("view",{},"",[]);
-            }
-        ]);
-        (new AsyncView(steps)).render();*/
-
+export class AjaxTest extends Test {
+    run(){
         var list = ['a','b','c','d'];
 
+        list.forEach((item)=>{
+            this.getMenu(item)
+        });
+    }
+    getMenu(item){
         var steps = new class{
             init(){
-                list.forEach((item)=>{
-                    console.log(item);
-                    Ajax.get("/App/api/menu.json?id="+item,this.callback);
-                });
+                console.log(item);
+                Ajax.get("/lepton/api/menu.json?id="+item,this.callback)
             }
             callback(err, data){
                 console.log(data);
+                assert(!err,'Success','Fail')
             }
         }();
         steps.init();
     }
-};
+}

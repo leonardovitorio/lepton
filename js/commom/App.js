@@ -52,7 +52,7 @@ export class App {
                 hashSources[source.name] = source
                 app.index++
                 if(app.index === app.sources.length){
-                    app.main()
+                    app.main(app.services)
                 }
             }
         }

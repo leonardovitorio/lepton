@@ -5,7 +5,7 @@ import { html } from "../commom/html.js"
 import { PodcastModel } from "../models/PodcastModel.js"
 import { AsyncView } from "../commom/AsyncView.js"
 import { ModelBind } from "../commom/ModelBind.js"
-import { services } from '../commom/services.js'
+import { services } from "../services/services.js"
 import { ArrayView } from "../commom/ArrayView.js"
 import { TextView } from "../commom/TextView.js"
 

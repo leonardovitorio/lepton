@@ -1,14 +1,16 @@
 import { View } from "./View.js";
 
 export class AnimatedView extends View {
-    constructor(target, animation){
+    constructor(target, steps, durationTime, animation){
         super(target)
+        this.steps = steps
+        this.durationTime = durationTime
         this.animation = animation
-        this.animation.target = target
     }
     render(){
-        animation.init()
-        super.render()
-        animation.render()
+        var el = document.getElementById(this.target)
+        this.animation.init(el)
+        this.animation.render(el)
+        this.animation.end(el)
     }
 }
